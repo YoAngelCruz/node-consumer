@@ -45,5 +45,5 @@ for msg in consumer:
        print (meme_rec)
        meme_id = db.nosql_info.insert_one(meme_rec)
        print("Data inserted with record ids", meme_id)
-    except:
-       print("Could not insert into MongoDB")
+    except Exception as e:
+       print("Could not insert into MongoDB", e)
